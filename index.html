@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div>
+        <img src="img.jpg" alt="Background">
+    </div>
+
+    <div class="container">
+        <h1>Sign in to Salessai</h1>
+        <input type="text" class="text" placeholder="E-mail">
+        <input type="password" class="password" placeholder="Password">
+        <input class="radio" type="radio" name="status"> Remember me   
+        <a href="#">Forget Password?</a>
+        <button type="submit" class="sign-in">Sign-in</button>
+
+        <h5>Or login with</h5>
+        <button class="Google"><img class="logo" src="google1.png" alt="Google">Google</button>
+        <button class="Apple"><img class="logo" src="apple1.png" alt="Apple">Apple</button>
+
+        <p class="signup-link">Don’t have an account? <a href="#">Sign Up now</a></p>
+    </div>
+
+    <script>
+        document.querySelector(".sign-in").addEventListener("click", function() {
+            console.log("sign-in");
+
+            let email = document.querySelector(".text").value;
+            let password = document.querySelector(".password").value;
+
+            if(email === "admin@gmail.com" && password === "admin") {
+                window.alert("Success");
+            } else {
+                window.alert("Failure");
+            }
+        });
+    </script>
+    
+</body>
+</html>
